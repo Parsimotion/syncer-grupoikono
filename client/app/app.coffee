@@ -1,6 +1,6 @@
 'use strict'
 
-window.app = angular.module 'integration-seed-app', [
+window.app = angular.module 'syncer-grupoikono-app', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
