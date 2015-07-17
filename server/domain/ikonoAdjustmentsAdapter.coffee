@@ -1,5 +1,5 @@
 _ = require("lodash")
-Adjustment = require("producteca-sdk").Adjustment
+Adjustment = require("producteca-sdk").Sync.Adjustment
 
 module.exports =
 
@@ -20,14 +20,14 @@ class IkonoAdjustmentsAdapter
         identifier: it.UrbPartNum
         name: it.UsbDescrip
         stocks: @filterNulls [
-          stockAdjustmentIfExists "Warehouse01", it
-          stockAdjustmentIfExists "Warehouse02", it
-          stockAdjustmentIfExists "Warehouse03", it
+          @stockAdjustmentIfExists "Warehouse01", it
+          @stockAdjustmentIfExists "Warehouse02", it
+          @stockAdjustmentIfExists "Warehouse03", it
         ]
         prices: @filterNulls [
-          priceAdjustmentIfExists "Lista01", it
-          priceAdjustmentIfExists "Lista02", it
-          priceAdjustmentIfExists "Lista03", it
+          @priceAdjustmentIfExists "Lista01", it
+          @priceAdjustmentIfExists "Lista02", it
+          @priceAdjustmentIfExists "Lista03", it
         ]
 
   clean: (collection) =>
