@@ -15,14 +15,13 @@ describe "IkonoAdjustmentsAdapter", ->
         }
       ]
 
-    mappings = [
-      { from: "Warehouse01", to: "El primer warehouse" }
-      { from: "Warehouse03", to: "El tercer warehouse" }
-      { from: "Lista01", to: "La primer priceList" }
-      { from: "Lista02", to: "La segunda priceList" }
-    ]
+    mappings =
+      Warehouse01: "El primer warehouse"
+      Warehouse03: "El tercer warehouse"
+      Lista01: "La primer priceList"
+      Lista02: "La segunda priceList"
 
-    new IkonoAdjustmentsAdapter().adapt(parsedXml, mappings).should.eql [
+    new IkonoAdjustmentsAdapter(mappings).adapt(parsedXml).should.eql [
       {
         identifier: "600001"
         name: "Studio Live 16"
