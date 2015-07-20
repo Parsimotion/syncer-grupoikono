@@ -7,7 +7,7 @@ exports.notification = (req, res) ->
 
   User.findOneAsync(_id: req.body.userId)
     .then (user) =>
-      new IkonoSyncer().synchronize().then (results) =>
+      new IkonoSyncer(user).synchronize().then (results) =>
         res.json 200, results
 
     #.catch (e) => res.send 400, e.message or e

@@ -3,8 +3,8 @@ clean = (o) => JSON.parse JSON.stringify o
 
 describe "IkonoAdjustmentsAdapter", ->
   it "can adapt the ugly parsed xml to a pretty list of adjustments", ->
-    parsedXml =
-      Response: ErrorCode: [0]
+    parsedXml = Response:
+      ErrorCode: [0]
       Message: ["NO ERROR"]
       TotalItems: ["2"]
       Items: [

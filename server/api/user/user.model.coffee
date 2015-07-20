@@ -24,5 +24,6 @@ UserSchema = new Schema
 
   settings:
     saved: Boolean
+    mappings: Schema.Types.Mixed
 
 module.exports = mongoose.model("User", UserSchema)

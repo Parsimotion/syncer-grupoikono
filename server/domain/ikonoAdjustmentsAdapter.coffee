@@ -13,7 +13,7 @@ class IkonoAdjustmentsAdapter
   constructor: (@mappings) ->
 
   adapt: (stocksAndPrices) =>
-    items = @_clean _.first(stocksAndPrices.Items).item
+    items = @_clean _.first(stocksAndPrices.Response.Items).item
 
     items.map (it) =>
       new Adjustment
