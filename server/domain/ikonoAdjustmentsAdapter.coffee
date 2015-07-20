@@ -41,5 +41,5 @@ class IkonoAdjustmentsAdapter
       warehouse: @mappings[name], quantity: item[name]
 
   priceAdjustmentIfExists: (name, item) =>
-    if @mappings[name]? and item[name] >= 0
+    if @mappings[name]? and item[name] isnt "-1"
       priceList: @mappings[name], value: item[name]

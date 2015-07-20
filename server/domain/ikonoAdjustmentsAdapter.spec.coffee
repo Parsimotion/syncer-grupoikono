@@ -26,12 +26,12 @@ describe "IkonoAdjustmentsAdapter", ->
         identifier: "600001"
         name: "Studio Live 16"
         stocks: [
-          { warehouse: "El primer warehouse", quantity: 27 }
-          { warehouse: "El tercer warehouse", quantity: 1 }
+          { warehouse: "El primer warehouse", quantity: "27.0000" }
+          { warehouse: "El tercer warehouse", quantity: "1.0000" }
         ]
         prices: [
-          { priceList: "La primer priceList", value: 19909.4991 }
-          { priceList: "La segunda priceList", value: 153 }
+          { priceList: "La primer priceList", value: "19909.4991" }
+          { priceList: "La segunda priceList", value: "153" }
         ]
       }
     ,
@@ -39,11 +39,11 @@ describe "IkonoAdjustmentsAdapter", ->
         identifier: "600050"
         name: "Audiobox!"
         stocks: [
-          { warehouse: "El primer warehouse", quantity: 47 }
-          { warehouse: "El tercer warehouse", quantity: 0 }
+          { warehouse: "El primer warehouse", quantity: "47.0000" }
+          { warehouse: "El tercer warehouse", quantity: "0.0000" }
         ]
         prices: [
-          { priceList: "La primer priceList", value: 2615.3843 }
+          { priceList: "La primer priceList", value: "2615.3843" }
           # -1 => don't update the price
         ]
       }
