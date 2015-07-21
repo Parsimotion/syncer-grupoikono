@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'integration-seed-app'
+angular.module 'syncer-grupoikono-app'
 .config ($stateProvider) ->
   $stateProvider
   .state 'main',

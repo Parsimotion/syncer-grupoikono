@@ -1,5 +1,5 @@
-# integration-seed
-Please, replace the string "integration-seed" with the name you want, in all the project.
+# syncer-grupoikono
+Please, replace the string "syncer-grupoikono" with the name you want, in all the project.
 
 ## Setup
 
