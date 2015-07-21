@@ -19,12 +19,12 @@ class IkonoAdjustmentsAdapter
       new Adjustment
         identifier: it.UrbPartNum
         name: it.UsbDescrip
-        stocks: @_filterNulls [
+        stocks: _.compact [
           @_stockAdjustmentIfExists "Warehouse01", it
           @_stockAdjustmentIfExists "Warehouse02", it
           @_stockAdjustmentIfExists "Warehouse03", it
         ]
-        prices: @_filterNulls [
+        prices: _.compact [
           @_priceAdjustmentIfExists "Lista01", it
           @_priceAdjustmentIfExists "Lista02", it
           @_priceAdjustmentIfExists "Lista03", it
@@ -32,9 +32,6 @@ class IkonoAdjustmentsAdapter
 
   _clean: (collection) =>
     collection.map (it) => _.mapValues it, (it) => it[0]
-
-  _filterNulls: (collection) =>
-    collection.filter (it) => it?
 
   _stockAdjustmentIfExists: (name, item) =>
     if @mappings[name]?
