@@ -1,4 +1,4 @@
-IkonoAdjustmentsAdapter = require("./IkonoAdjustmentsAdapter")
+IkonoAdjustmentsAdapter = require("./ikonoAdjustmentsAdapter")
 clean = (o) => JSON.parse JSON.stringify o
 
 describe "IkonoAdjustmentsAdapter", ->
