@@ -10,7 +10,5 @@ exports.notification = (req, res) ->
       new IkonoSyncer(user).synchronize().then (results) =>
         res.json 200, results
 
-    #.catch (e) => res.send 400, e.message or e
-
 isSignatureValid = (req) ->
   req.headers["signature"] is (process.env.WEBJOB_SIGNATURE or "default")
