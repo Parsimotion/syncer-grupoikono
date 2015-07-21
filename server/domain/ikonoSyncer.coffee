@@ -30,10 +30,10 @@ class IkonoSyncer
         new Syncer(@productecaApi, @config.sync, products).execute(adjustments)
 
   getAdjustments: =>
-    soap.createClientAsync(@config.wsdlUrl).then (client) =>
-      client = Promise.promisifyAll client
-
-      client.GetPnAAsync(name: @config.xml).spread (data) =>
-        xml = data.return.$value
-        xml2js.parseStringAsync(xml).then (stocksAndPrices) =>
-          new IkonoAdjustmentsAdapter(@mappings).adapt stocksAndPrices
+    soap.createClientAsync(@config.wsdlUrl)
+      .then Promise.promisifyAll
+      .then (client) =>
+        client.GetPnAAsync(name: @config.xml).spread (data) =>
+          xml = data.return.$value
+          xml2js.parseStringAsync(xml).then (stocksAndPrices) =>
+            new IkonoAdjustmentsAdapter(@mappings).adapt stocksAndPrices
