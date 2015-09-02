@@ -1,5 +1,5 @@
-# syncer-grupoikono
-Please, replace the string "syncer-grupoikono" with the name you want, in all the project.
+# syncer-motomel
+Please, replace the string "syncer-motomel" with the name you want, in all the project.
 
 ## Setup
 

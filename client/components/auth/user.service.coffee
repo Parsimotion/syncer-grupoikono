@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'syncer-grupoikono-app'
+angular.module 'syncer-motomel-app'
 .factory 'User', ($resource) ->
   $resource '/api/users/:id/:controller',
     id: '@_id'

@@ -10,8 +10,8 @@ module.exports = (grunt) ->
     localConfig = {}
 
 
-  azureWebsite = "syncer-grupoikono" + if process.env.BRANCH_NAME is "master" then "" else "-#{process.env.BRANCH_NAME}"
-  azureGit = "#{azureWebsite}.scm.azurewebsites.net:443/syncer-grupoikono.git"
+  azureWebsite = "syncer-motomel" + if process.env.BRANCH_NAME is "master" then "" else "-#{process.env.BRANCH_NAME}"
+  azureGit = "#{azureWebsite}.scm.azurewebsites.net:443/syncer-motomel.git"
   remote = "https://#{process.env.AZURE_GIT_CREDENTIALS}@#{azureGit}"
 
   # Load grunt tasks automatically, when needed
@@ -326,7 +326,7 @@ module.exports = (grunt) ->
     ngtemplates:
       options:
       # This should be the name of your apps angular module
-        module: "syncer-grupoikono-app"
+        module: "syncer-motomel-app"
         htmlmin:
           collapseBooleanAttributes: true
           collapseWhitespace: true

@@ -1,6 +1,6 @@
 'use strict'
 
-window.app = angular.module 'syncer-grupoikono-app', [
+window.app = angular.module 'syncer-motomel-app', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

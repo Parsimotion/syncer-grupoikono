@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'syncer-grupoikono-app'
+angular.module 'syncer-motomel-app'
 .factory 'Auth', ($location, $rootScope, $http, User, $cookieStore, $q) ->
   currentUser = User.get()
 

@@ -12,7 +12,7 @@ module.exports =
 
   # MongoDB connection options
   mongo:
-    uri: process.env.MONGO_URI or "mongodb://localhost/syncer-grupoikono"
+    uri: process.env.MONGO_URI or "mongodb://localhost/syncer-motomel"
     options:
       server:
         socketOptions:

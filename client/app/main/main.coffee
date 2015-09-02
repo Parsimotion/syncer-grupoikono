@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'syncer-grupoikono-app'
+angular.module 'syncer-motomel-app'
 .config ($stateProvider) ->
   $stateProvider
   .state 'main',

@@ -5,4 +5,4 @@
 
 # MongoDB connection options
 module.exports = mongo:
-  uri: "mongodb://localhost/syncer-grupoikono-test"
+  uri: "mongodb://localhost/syncer-motomel-test"

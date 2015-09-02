@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module 'syncer-grupoikono-app'
+angular.module 'syncer-motomel-app'
 .controller 'NavbarCtrl', ($scope, $location, Auth) ->
   $scope.menu = [
     title: 'Inicio'

@@ -3,7 +3,7 @@ $scope = null
 getController = null
 
 beforeEach ->
-  module "syncer-grupoikono-app"
+  module "syncer-motomel-app"
 
   inject ($controller, $rootScope, _$httpBackend_, observeOnScope) ->
     $httpBackend = _$httpBackend_
