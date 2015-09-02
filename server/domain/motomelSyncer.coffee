@@ -12,6 +12,11 @@ class MotomelSyncer
     @productecaApi = new ProductecaApi
       accessToken: user.tokens.producteca
 
+    @config =
+      sync:
+        synchro: prices: true, stocks: true
+        identifier: "barcode"
+
   synchronize: =>
     @getAdjustments().then (adjustments) =>
       @productecaApi.getProducts().then (products) =>
