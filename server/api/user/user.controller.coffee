@@ -2,6 +2,7 @@
 User = require("./user.model")
 passport = require("passport")
 config = include("config/environment")
+Syncer = require("../../domain/motomelSyncer")
 
 ###*
 Get my info

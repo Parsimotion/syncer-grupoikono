@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Request>
-  <CustomerID>PAUDIO</CustomerID>
-  <SecurityToken>$token</SecurityToken>
-  <WareHouse01>01</WareHouse01>
-  <WareHouse02>02</WareHouse02>
-  <WareHouse03>03</WareHouse03>
-  <Lista01>1</Lista01>
-  <Lista02>2</Lista02>
-  <Lista03></Lista03>
-  <Rubro></Rubro>
-  <Grupo>122</Grupo>
-  <Categoria></Categoria>
-  <Page>1</Page>
-  <Disponible>SS</Disponible>
-</Request>
+<Motomel>
+  <item>
+    <code>55056</code>
+    <description>BUJE BOMBA ACEITE</description>
+    <stock>3</stock>
+    <price>17.6418</price>
+  </item>
+  <item>
+    <code>55073</code>
+    <description>BUJE PLASTICO</description>
+    <stock>0</stock>
+    <price>1.1568</price>
+  </item>  
+</Motomel>

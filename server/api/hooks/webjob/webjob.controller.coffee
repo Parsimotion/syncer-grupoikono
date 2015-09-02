@@ -1,5 +1,5 @@
 User = include("api/user/user.model")
-IkonoSyncer = include("domain/ikonoSyncer")
+MotomelSyncer = include("domain/motomelSyncer")
 
 exports.notification = (req, res) ->
   if not isSignatureValid req
@@ -7,7 +7,7 @@ exports.notification = (req, res) ->
 
   User.findOneAsync(_id: req.body.userId)
     .then (user) =>
-      new IkonoSyncer(user).synchronize().then (results) =>
+      new MotomelSyncer(user).synchronize().then (results) =>
         res.json 200, results
 
 isSignatureValid = (req) ->
