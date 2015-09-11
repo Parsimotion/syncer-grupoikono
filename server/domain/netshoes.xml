@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<update-all-attributes>
+<document name="http://www.tiendacruzazulonline.com.mx/uniformes-de-juego/jersey-infantil-umbro-cruz-azul-casa-13-14-s-n-/prod010-0040-005.html">
+    <attribute value="Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°" name="Title"/>
+    <attribute value="Jerseys" name="Family"/>
+    <attribute value="Continuando con el estilo característico de la &lt;i&gt;máquina celeste&lt;/i&gt;, el Jersey Umbro Cruz Azul Local 13/14 s/n° Infantil, llega para cautivar a todos los pequeños apasionados, al conjunto de la noria. El comienzo de liga MX está por llegar, y las esperanzas de todos los niños recaen nuevamente en éste equipo, que ha sido protagonista en la fase final de cada torneo. La nueva piel está confeccionada en material suave y ligero, posee un diseño ergonómico el cual se adapta al cuerpo de forma natural, facilitando sus movimientos dentro y fuera de las canchas. Además posee inserciones de malla en las axilas, que controlan el sudor manteniéndolos secos y muy cómodos. En cuestión de estilo, sus logos esenciales y color característico de la prenda, sumado al logo bordado en la manga, que los acredita como campeones de la copa MX, los hará ver geniales cada vez que asistan al llamado estadio azul.&lt;li&gt;Jersey Infantil Umbro Cruz Azul local 13/14.&lt;li&gt;Modelo infantil.&lt;li&gt;Sin número.&lt;li&gt;Manga corta.&lt;li&gt;Cuello en especial construcción.&lt;li&gt;Diseño ergonómico que se adapta a la forma del cuerpo.&lt;li&gt;Paneles de malla en axilas.&lt;li&gt;Logo campeón copa MX, estampado en la manga derecha.&lt;li&gt;Logo Umbro lado derecho.&lt;li&gt;Escudo del club lado izquierdo.&lt;li&gt;Diseño en destaque en la parte central.&lt;li&gt;No se recomienda planchar.&lt;li&gt;Tamaños de las tallas (aproximadamente):&lt;br&gt;&lt;b&gt;08:&lt;/b&gt; 34x45 cm.&lt;br&gt;&lt;b&gt;10:&lt;/b&gt; 36x47 cm.&lt;br&gt;&lt;b&gt;12:&lt;/b&gt; 38x49 cm.&lt;br&gt;&lt;b&gt;14:&lt;/b&gt; 40x51 cm.&lt;br&gt;&lt;br&gt;&lt;b&gt;Composición:&lt;/b&gt; 100% poliéster.&lt;br&gt;&lt;b&gt;Garantía del fabricante:&lt;/b&gt; contra defecto de fábrica.&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;br&gt;&lt;b&gt;Origen:&lt;/b&gt; Nacional" name="Description"/>
+    <attribute value="produto" name="PageType"/>
+    <attribute value="Umbro" name="Brand"/>
+    <attribute value="Infantil" name="Gender"/>
+    <attribute value="010-0040-005" name="SKU Produto_Pai"/>
+    <attribute value="112789" name="Codigo Produto"/>
+    <attribute value="http://images.mx.netshoes.net/mx/produtos/05/010-0040-005/010-0040-005_vitrine.jpg" name="ThumbUrl"/>
+    <attribute value="http://images.mx.netshoes.net/mx/produtos/05/010-0040-005/010-0040-005_detalhe1.jpg" name="DetalheURL"/>
+    <attribute value="http://images.mx.netshoes.net/mx/produtos/05/010-0040-005/010-0040-005_janela.jpg" name="JanelaURL"/>
+    <attribute value="Garage" name="Category"/>
+    <attribute value="Uniformes de Juego" name="Category"/>
+    <attribute value="Ropas" name="Category"/>
+    <attribute value="Futbol" name="Category"/>
+    <attribute value="Equipos Nacionales" name="Category"/>
+    <attribute value="Cruz Azul" name="Category"/>
+    <attribute value="Infantil" name="Category"/>
+    <attribute value="Novedades" name="Category"/>
+    <attribute value="419.00" name="Price For"/>
+    <attribute value="749.00" name="Price Of"/>
+    <attribute value="1" name="Parcels Number"/>
+    <attribute value="419.00" name="Parcels Value"/>
+    <attribute value="010-0040-005-08" name="SKU Produto">
+        <attribute value="0" name="estoque"/>
+    </attribute>
+    <attribute value="010-0040-005-10" name="SKU Produto">
+        <attribute value="0" name="estoque"/>
+    </attribute>
+    <attribute value="010-0040-005-12" name="SKU Produto">
+        <attribute value="2" name="estoque"/>
+    </attribute>
+    <attribute value="010-0040-005-14" name="SKU Produto">
+        <attribute value="0" name="estoque"/>
+    </attribute>
+    <attribute value="2" name="Estoque"/>
+    <attribute value="Azul" name="Color">
+        <attribute value="12" name="Size"/>
+    </attribute>
+</document>
+</update-all-attributes>

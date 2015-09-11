@@ -22,6 +22,8 @@ UserSchema = new Schema
   tokens:
     producteca: String
 
+  source: String
+
   settings:
     saved: Boolean
     mappings: Schema.Types.Mixed

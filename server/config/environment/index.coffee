@@ -21,7 +21,7 @@ all =
 
   # Secret for session, you will want to change this and make it an environment variable
   secrets:
-    session: process.env.SESSION_SECRET or "syncer-grupoikono-secret"
+    session: process.env.SESSION_SECRET or "syncer-motomel-secret"
 
   # MongoDB connection options
   mongo:
@@ -31,8 +31,8 @@ all =
 
   producteca:
     uri: process.env.PRODUCTECA_API or "http://api.producteca.com"
-    clientID: process.env.PRODUCTECA_CLIENTID or "id"
-    clientSecret: process.env.PRODUCTECA_CLIENTSECRET or "secret"
+    clientID: process.env.PRODUCTECA_CLIENTID or "5"
+    clientSecret: process.env.PRODUCTECA_CLIENTSECRET or "6e5800d3-4766-4601-a7f0-034d70382b7c"
     callbackURL: (process.env.DOMAIN or "") + "/auth/producteca/callback"
 
 authServerUrl = process.env.AUTHORIZATION_SERVER_URL
