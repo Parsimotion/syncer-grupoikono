@@ -18,5 +18,9 @@ class HttpSyncer
         new Syncer(@productecaApi, @options.sync, products).execute(adjustments)
 
   getAdjustments: =>
-    request.getAsync(@options.url, {}).spread ({body: xml}) =>
-      @options.adapter.parse iconvlite.decode(xml, 'latin1')
+    xml = ""
+    request.get(@options.url)
+    .on 'data', (data) ->
+      xml += iconvlite.decode(data, @options.encoding or 'utf8')
+    .on 'end', ->
+      @options.adapter.parse xml

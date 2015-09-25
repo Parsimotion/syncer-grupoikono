@@ -18,15 +18,14 @@ exports.notification = (req, res) ->
 
       netshoesOptions =
         adapter: new NetshoesXmlAdapter()
-        url: 'http://www.tiendacruzazulonline.com.mx/template-resources/export/catalogo.xml'  
+        url: 'http://www.tiendacruzazulonline.com.mx/template-resources/export/catalogo.xml'
+        encoding: 'latin1'
         sync:
           synchro: prices: true, stocks: true, data: true
           createProducts: true
           identifier: "barcode"
 
       options = if user.source is "netshoes" then netshoesOptions else motomelOptions
-
-      console.log options
       
       new HttpSyncer(user, options).synchronize().then (results) =>
         res.json 200, results
