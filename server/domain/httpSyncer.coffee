@@ -20,7 +20,9 @@ class HttpSyncer
   getAdjustments: =>
     xml = ""
     request.get(@options.url)
-    .on 'data', (data) ->
-      xml += iconvlite.decode(data, @options.encoding or 'utf8')
-    .on 'end', ->
+    .on 'data', (data) =>
+      decoded = iconvlite.decode(data, @options.encoding or 'utf8')
+      console.log decoded
+      xml += decoded
+    .on 'end', =>
       @options.adapter.parse xml
