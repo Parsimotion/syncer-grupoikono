@@ -3,6 +3,7 @@ request = require("bluebird").promisifyAll require("request")
 SDK = require("producteca-sdk")
 ProductecaApi = SDK.Api
 Syncer = SDK.Sync.Syncer
+iconvlite = require('iconv-lite')
 
 module.exports =
 
@@ -18,4 +19,4 @@ class HttpSyncer
 
   getAdjustments: =>
     request.getAsync(@options.url, {}).spread ({body: xml}) =>
-      @options.adapter.parse xml
+      @options.adapter.parse iconvlite.decode(xml, 'latin1')

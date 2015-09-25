@@ -1,20 +1,21 @@
 NetshoesXmlAdapter = require("./netshoesXmlAdapter")
 fs = require("fs")
 path = require("path")
+iconvlite = require('iconv-lite')
 _ = require("lodash")
 clean = (collection) -> collection.map (o) -> _.omit o, _.isFunction
 
 describe "NetshoesXmlAdapter", ->
   it "can adapt the xml to a list of adjustments with numerical size", ->
     filename = path.join __dirname, 'netshoes.xml'
-    xml = fs.readFileSync filename, 'ascii'
+    xml = iconvlite.decode fs.readFileSync(filename), 'latin1'
     new NetshoesXmlAdapter().parse(xml).then (adjustments) =>
       expexted = [
         brand: "Umbro"
         category: "Jerseys"
-        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         identifier: "010-0040-005-08"
-        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         pictures: [url: "http://images.mx.netshoes.net/mx/produtos/05/010-0040-005/010-0040-005_detalhe1.jpg"]
         primaryColor: "Azul marino"
         secondaryColor: "Blanco"
@@ -25,9 +26,9 @@ describe "NetshoesXmlAdapter", ->
       ,
         brand: "Umbro"
         category: "Jerseys"
-        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         identifier: "010-0040-005-10"
-        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         pictures: [url: "http://images.mx.netshoes.net/mx/produtos/05/010-0040-005/010-0040-005_detalhe1.jpg"]
         primaryColor: "Azul marino"
         secondaryColor: "Blanco"
@@ -38,9 +39,9 @@ describe "NetshoesXmlAdapter", ->
       ,
         brand: "Umbro"
         category: "Jerseys"
-        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         identifier: "010-0040-005-12"
-        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         pictures: [url: "http://images.mx.netshoes.net/mx/produtos/05/010-0040-005/010-0040-005_detalhe1.jpg"]
         primaryColor: "Azul marino"
         secondaryColor: "Blanco"
@@ -51,9 +52,9 @@ describe "NetshoesXmlAdapter", ->
       ,
         brand: "Umbro"
         category: "Jerseys"
-        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        description: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         identifier: "010-0040-005-14"
-        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n0"
+        name: "Jersey Infantil Umbro Cruz Azul Casa 13/14 s/n°"
         pictures: [url: "http://images.mx.netshoes.net/mx/produtos/05/010-0040-005/010-0040-005_detalhe1.jpg"]
         primaryColor: "Azul marino"
         secondaryColor: "Blanco"
@@ -66,7 +67,7 @@ describe "NetshoesXmlAdapter", ->
 
   it "can adapt the xml to a list of adjustments with fixed size", ->
     filename = path.join __dirname, 'netshoes.xml'
-    xml = fs.readFileSync filename, 'ascii'
+    xml = fs.readFileSync filename, 'utf8'
     new NetshoesXmlAdapter().parse(xml).then (adjustments) =>
       expexted = [
         brand: "Under Armour"
