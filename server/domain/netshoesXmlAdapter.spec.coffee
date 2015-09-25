@@ -122,4 +122,21 @@ describe "NetshoesXmlAdapter", ->
         prices: [{ priceList: "Default", value: 799 }]
         code: "129520"
       ]
-      clean(adjustments.slice 4).should.eql expexted
+      clean(adjustments.slice 4, 8).should.eql expexted
+
+  it "can adapt the xml to a single product", ->
+    filename = path.join __dirname, 'netshoes.xml'
+    xml = fs.readFileSync filename, 'utf8'
+    new NetshoesXmlAdapter().parse(xml).then (adjustments) =>
+      expexted = [
+        brand: "Under Armour"
+        category: "Gorras"
+        description: "Gorra Under Armour Original Skull Ii"
+        identifier: "181-0135-129-01"
+        name: "Gorra Under Armour Original Skull Ii"
+        pictures: [url: "http://images.mx.netshoes.net/mx/produtos/29/181-0135-129/181-0135-129_detalhe1.jpg"]
+        stocks: [{ warehouse: "Default", quantity: 5 }]
+        prices: [{ priceList: "Default", value: 299 }]
+        code: "128939"
+      ]
+      clean(adjustments.slice 8, 9).should.eql expexted      

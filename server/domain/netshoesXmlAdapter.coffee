@@ -54,7 +54,10 @@ class NetshoesXmlAdapter
             stocks: [{ warehouse: "Default", quantity: variation.attribute[0].$.value }]
             prices: [{ priceList: "Default", value: getValueFor("Price For") }]
             pictures: [{ url: getValueFor("DetalheURL") }]
-            primaryColor: mapColor colors[0]
-            secondaryColor: mapColor colors[1]
-            size: size
 
+          if size != "U"
+            adjustment.primaryColor = mapColor colors[0]
+            adjustment.secondaryColor = mapColor colors[1]
+            adjustment.size = size
+
+          adjustment
