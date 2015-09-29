@@ -18,7 +18,7 @@ exports.notification = (req, res) ->
 
       netshoesOptions =
         adapter: new NetshoesXmlAdapter()
-        url: 'http://www.tiendacruzazulonline.com.mx/template-resources/export/catalogo.xml'
+        url: 'http://www.netshoes.com.mx/template-resources/export/catalogo.xml'
         encoding: 'latin1'
         sync:
           synchro: prices: true, stocks: true, data: true
