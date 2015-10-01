@@ -139,4 +139,4 @@ describe "NetshoesXmlAdapter", ->
         prices: [{ priceList: "Default", value: 299 }]
         code: "128939"
       ]
-      clean(adjustments.slice 8, 9).should.eql expexted      
+      clean(adjustments.slice 8, 9).should.eql expexted

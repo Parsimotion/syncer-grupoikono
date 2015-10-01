@@ -24,7 +24,6 @@ class HttpSyncer
       request.get(@options.url)
       .on 'data', (data) =>
         decoded = iconvlite.decode(data, @options.encoding or 'utf8')
-        console.log decoded
         xml += decoded
       .on 'end', =>
         resolve @options.adapter.parse xml
