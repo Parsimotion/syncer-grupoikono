@@ -1,4 +1,4 @@
-# syncer-motomel
+# syncer-motomel y netshoes
 Please, replace the string "syncer-motomel" with the name you want, in all the project.
 
 ## Setup
