@@ -86,7 +86,7 @@ class NetshoesXmlAdapter
           attribute?.$.value
         mapColor = (color) ->
           colorMapping[color] or color
-
+        
         variations = attributes.filter (it) -> it.$.name is "SKU Produto"
         variations.map (variation) =>
           sku = variation.$.value
@@ -96,6 +96,8 @@ class NetshoesXmlAdapter
           sizingType = if _.isNaN parseInt(colorTag.attribute[0].$.value) then "fixed" else "numeric"
           sizeId = parseInt _.last sku.split('-')
           size = if sizingType is "numeric" then (numericSizeMapping[sizeId] or sizeId) else fixedSizeMapping[sizeId]
+          originalPrice = +getValueFor("Price For")
+          price = if originalPrice < 900 then originalPrice + 58 else originalPrice
 
           adjustment = new Adjustment
             code: getValueFor "Codigo Produto"
@@ -105,7 +107,7 @@ class NetshoesXmlAdapter
             description: getValueFor "Title"
             identifier: sku
             stocks: [{ warehouse: "Default", quantity: variation.attribute[0].$.value }]
-            prices: [{ priceList: "Default", value: getValueFor("Price For") }]
+            prices: [{ priceList: "Default", value: price }]
             pictures: [{ url: getValueFor("DetalheURL") }]
             notes: getValueFor "Description"
 

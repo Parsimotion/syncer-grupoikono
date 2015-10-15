@@ -20,10 +20,10 @@
         <attribute value="Cruz Azul" name="Category"/>
         <attribute value="Infantil" name="Category"/>
         <attribute value="Novedades" name="Category"/>
-        <attribute value="419.00" name="Price For"/>
-        <attribute value="749.00" name="Price Of"/>
+        <attribute value="1419.00" name="Price For"/>
+        <attribute value="1749.00" name="Price Of"/>
         <attribute value="1" name="Parcels Number"/>
-        <attribute value="419.00" name="Parcels Value"/>
+        <attribute value="1419.00" name="Parcels Value"/>
         <attribute value="010-0040-005-08" name="SKU Produto">
             <attribute value="0" name="estoque"/>
         </attribute>
@@ -62,10 +62,10 @@
         <attribute value="Cruz Azul" name="Category"/>
         <attribute value="Novedades" name="Category"/>
         <attribute value="Lanzamientos" name="Category"/>
-        <attribute value="799.00" name="Price For"/>
-        <attribute value="799.00" name="Price Of"/>
+        <attribute value="1799.00" name="Price For"/>
+        <attribute value="1799.00" name="Price Of"/>
         <attribute value="3" name="Parcels Number"/>
-        <attribute value="266.33" name="Parcels Value"/>
+        <attribute value="1266.33" name="Parcels Value"/>
         <attribute value="181-0177-005-02" name="SKU Produto">
         <attribute value="0" name="estoque"/>
         </attribute>
@@ -101,6 +101,34 @@
         <attribute value="Gorras y Sombreros" name="Category"/>
         <attribute value="Accesorios" name="Category"/>
         <attribute value="Futbol Americano" name="Category"/>
+        <attribute value="1299.00" name="Price For"/>
+        <attribute value="1299.00" name="Price Of"/>
+        <attribute value="1" name="Parcels Number"/>
+        <attribute value="1299.00" name="Parcels Value"/>
+        <attribute value="181-0135-129-01" name="SKU Produto">
+            <attribute value="5" name="estoque"/>
+        </attribute>
+        <attribute value="5" name="Estoque"/>
+        <attribute value="Azul+Verde" name="Color">
+            <attribute value="Unitalla" name="Size"/>
+        </attribute>
+    </document>     
+    <document name="http://www.tiendacruzazulonline.com.mx/gorras-y-sombreros/gorra-under-armour-original-skull-ii/prod181-0135-129.html">
+        <attribute value="Gorra Under Armour Original Skull Ii" name="Title"/>
+        <attribute value="Gorras" name="Family"/>
+        <attribute value="Salta al <i>emparrillado</i> con los mejores accesorios y dispuesto a vencer al rival, portando la Gorra Under Armour Original Skull Ii. Su increíble diseño llamativo, está confeccionado con tecnología <i>HeatGear</i>, que absorbe el sudor y es de secado rápido. La banda elástica, proporciona un ajuste personalizado. El sistema anti olor previene el crecimiento de microbios. Por último, la fabricación <i>4-Way Stretch</i>, permite mayor movilidad y mantiene la forma.<li>Gorra Under Armour Original Skull Ii.<li>Modelo masculino.<li>Tecnología <i>HeatGear</i>.<li>Sistema anti olor.<li>Banda elástica de ajuste.<li>Fabricación <i>4-Way Stretch</i>.<br><br><b>Composición:</b> poliéster / elastano.<br><b>Garantía del fabricante:</b> contra defecto de fábrica.<br><b>Origen:</b> Importado" name="Description"/>
+        <attribute value="produto" name="PageType"/>
+        <attribute value="Under Armour" name="Brand"/>
+        <attribute value="Masculino" name="Gender"/>
+        <attribute value="181-0135-129" name="SKU Produto_Pai"/>
+        <attribute value="128939" name="Codigo Produto"/>
+        <attribute value="http://images.mx.netshoes.net/mx/produtos/29/181-0135-129/181-0135-129_vitrine.jpg" name="ThumbUrl"/>
+        <attribute value="http://images.mx.netshoes.net/mx/produtos/29/181-0135-129/181-0135-129_detalhe1.jpg" name="DetalheURL"/>
+        <attribute value="http://images.mx.netshoes.net/mx/produtos/29/181-0135-129/181-0135-129_janela.jpg" name="JanelaURL"/>
+        <attribute value="Gorras" name="Category"/>
+        <attribute value="Gorras y Sombreros" name="Category"/>
+        <attribute value="Accesorios" name="Category"/>
+        <attribute value="Futbol Americano" name="Category"/>
         <attribute value="299.00" name="Price For"/>
         <attribute value="299.00" name="Price Of"/>
         <attribute value="1" name="Parcels Number"/>
@@ -112,5 +140,5 @@
         <attribute value="Azul+Verde" name="Color">
             <attribute value="Unitalla" name="Size"/>
         </attribute>
-    </document>     
+    </document>    
 </update-all-attributes>
