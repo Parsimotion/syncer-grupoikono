@@ -74,46 +74,44 @@ colorMapping =
 module.exports =
 
 class NetshoesXmlAdapter
-  parse: (xml) =>
-    xml2js.parseStringAsync(xml).then (parsedXml) =>
-      adjustments = _.flatten parsedXml["update-all-attributes"].document.map (doc) =>
-        attributes = doc.attribute
+  adapt: (parsedXml) =>
+    attributes = parsedXml.attribute
 
-        findTag = (name) ->
-          _.find attributes, (it) -> it.$.name is name
-        getValueFor = (name) ->
-          attribute = findTag name
-          attribute?.$.value
-        mapColor = (color) ->
-          colorMapping[color] or color
-        
-        variations = attributes.filter (it) -> it.$.name is "SKU Produto"
-        variations.map (variation) =>
-          sku = variation.$.value
-          colorTag = findTag "Color"
-          colors = colorTag?.$.value.split('+').map((it) -> it.replace '-', ' ')
+    findTag = (name) ->
+      _.find attributes, (it) -> it.$.name is name
+    getValueFor = (name) ->
+      attribute = findTag name
+      attribute?.$.value
+    mapColor = (color) ->
+      colorMapping[color] or color
+    
+    variations = attributes.filter (it) -> it.$.name is "SKU Produto"
+    variations.map (variation) =>
+      sku = variation.$.value
+      colorTag = findTag "Color"
+      colors = colorTag?.$.value.split('+').map((it) -> it.replace '-', ' ')
 
-          sizingType = if _.isNaN parseInt(colorTag.attribute[0].$.value) then "fixed" else "numeric"
-          sizeId = parseInt _.last sku.split('-')
-          size = if sizingType is "numeric" then (numericSizeMapping[sizeId] or sizeId) else fixedSizeMapping[sizeId]
-          originalPrice = +getValueFor("Price For")
-          price = if originalPrice < 900 then originalPrice + 58 else originalPrice
+      sizingType = if _.isNaN parseInt(colorTag.attribute[0].$.value) then "fixed" else "numeric"
+      sizeId = parseInt _.last sku.split('-')
+      size = if sizingType is "numeric" then (numericSizeMapping[sizeId] or sizeId) else fixedSizeMapping[sizeId]
+      originalPrice = +getValueFor("Price For")
+      price = if originalPrice < 900 then originalPrice + 58 else originalPrice
 
-          adjustment = new Adjustment
-            code: getValueFor "Codigo Produto"
-            brand: getValueFor "Brand"
-            category: getValueFor "Family"
-            name: getValueFor "Title"
-            description: getValueFor "Title"
-            identifier: sku
-            stocks: [{ warehouse: "Default", quantity: variation.attribute[0].$.value }]
-            prices: [{ priceList: "Default", value: price }]
-            pictures: [{ url: getValueFor("DetalheURL") }]
-            notes: getValueFor "Description"
+      adjustment = new Adjustment
+        code: getValueFor "Codigo Produto"
+        brand: getValueFor "Brand"
+        category: getValueFor "Family"
+        name: getValueFor "Title"
+        description: getValueFor "Title"
+        identifier: sku
+        stocks: [{ warehouse: "Default", quantity: variation.attribute[0].$.value }]
+        prices: [{ priceList: "Default", value: price }]
+        pictures: [{ url: getValueFor("DetalheURL") }]
+        notes: getValueFor "Description"
 
-          if size != "U"
-            adjustment.primaryColor = mapColor colors[0]
-            adjustment.secondaryColor = mapColor colors[1]
-            adjustment.size = size
+      if size != "U"
+        adjustment.primaryColor = mapColor colors[0]
+        adjustment.secondaryColor = mapColor colors[1]
+        adjustment.size = size
 
-          adjustment
+      adjustment

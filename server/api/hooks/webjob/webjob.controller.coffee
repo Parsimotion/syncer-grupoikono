@@ -12,6 +12,7 @@ exports.notification = (req, res) ->
       motomelOptions =
         adapter: new MotomelXmlAdapter()
         url: 'http://www.motomel-online.com.ar:8100/Motomel2/harticulostoxml'
+        element: 'item'
         sync:
           synchro: prices: true, stocks: true
           identifier: "barcode"
@@ -19,14 +20,14 @@ exports.notification = (req, res) ->
       netshoesOptions =
         adapter: new NetshoesXmlAdapter()
         url: 'http://www.netshoes.com.mx/template-resources/export/catalogo.xml'
-        encoding: 'latin1'
+        element: 'document'
+        collect: 'attribute'
         sync:
           synchro: prices: true, stocks: true, data: true
           createProducts: true
           identifier: "barcode"
 
       options = if user.source is "netshoes" then netshoesOptions else motomelOptions
-      
       new HttpSyncer(user, options).synchronize().then (results) =>
         res.json 200, results
 

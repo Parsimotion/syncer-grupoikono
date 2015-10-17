@@ -7,20 +7,17 @@ Adjustment = SDK.Sync.Adjustment
 module.exports =
 
 class MotomelXmlAdapter
-  parse: (xml) =>
-    xml2js.parseStringAsync(xml).then (parsedXml) =>
-      items = @_clean parsedXml.Motomel.item
-      items.map (it) ->
-        new Adjustment
-          identifier: it.code
-          name: it.description
-          stocks: [
-            warehouse: 'Default'
-            quantity: it.stock
-          ]
-          prices: [
-            priceList: 'Default'
-            value: it.price
-          ]
+  adapt: (item) =>
+    adjustment = new Adjustment
+      identifier: item.code
+      name: item.description
+      stocks: [
+        warehouse: 'Default'
+        quantity: item.stock
+      ]
+      prices: [
+        priceList: 'Default'
+        value: item.price
+      ]
 
-  _clean: (collection) -> collection.map (it) -> _.mapValues it, (it) -> it[0]
+    return [ adjustment ]
