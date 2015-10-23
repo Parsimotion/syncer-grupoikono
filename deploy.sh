@@ -119,8 +119,8 @@ fi
 
 # 4. Copy pre-compiled node modules
 echo Copying pre-compiled node modules
-mkdir -p node_modules
-cp -rf pre_compiled_modules/xml-stream/ node_modules/
+mkdir -p node_modules/xml-stream
+cp -rf pre_compiled_modules/xml-stream/ node_modules/xml-stream
 
 ##################################################################################################################################
 
