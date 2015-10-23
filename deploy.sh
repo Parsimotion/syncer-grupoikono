@@ -109,18 +109,18 @@ fi
 # 2. Select node version
 selectNodeVersion
 
-# 3. Copy pre-compiled node modules
-echo Copying pre-compiled node modules
-mkdir -p node_modules/xml-stream
-cp -rf pre_compiled_modules/xml-stream/ node_modules/xml-stream/
-
-# 4. Install npm packages
+# 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --production
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
 fi
+
+# 4. Copy pre-compiled node modules
+echo Copying pre-compiled node modules
+mkdir -p node_modules/xml-stream
+cp -rf pre_compiled_modules/xml-stream/ node_modules/xml-stream/
 
 ##################################################################################################################################
 
