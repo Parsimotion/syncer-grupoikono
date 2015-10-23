@@ -1,5 +1,4 @@
-node_modules/*
-!node_modules/xml-stream
+node_modules
 public
 .tmp
 .sass-cache
