@@ -382,6 +382,8 @@ module.exports = (grunt) ->
             "package.json"
             "server/**/*"
             "App_Data/**/*"
+            ".deployment"
+            "deploy.sh"
           ]
         ,
           expand: true
