@@ -111,7 +111,8 @@ selectNodeVersion
 
 # 3. Copy pre-compiled node modules
 echo Copying pre-compiled node modules
-cp -r pre_compiled_modules/xml-stream/ node_modules/xml-stream/
+mkdir -p node_modules/xml-stream
+cp -rf pre_compiled_modules/xml-stream/ node_modules/xml-stream/
 
 # 4. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
