@@ -110,7 +110,7 @@ fi
 selectNodeVersion
 
 # 3. Install npm packages
-npm install node-gyp@latest
+npm install -g node-gyp@latest
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval $NPM_CMD install --msvs_version=2012 --production
