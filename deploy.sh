@@ -112,15 +112,10 @@ selectNodeVersion
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
-  eval $NPM_CMD install --production
+  eval $NPM_CMD install --msvs_version=2012 --production
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
 fi
-
-# 4. Copy pre-compiled node modules
-echo Copying pre-compiled node modules
-mkdir -p node_modules/xml-stream
-cp -rf pre_compiled_modules/xml-stream/ node_modules/xml-stream
 
 ##################################################################################################################################
 

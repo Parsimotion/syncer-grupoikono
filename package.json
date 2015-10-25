@@ -30,7 +30,8 @@
     "request": "^2.58.0",
     "serve-favicon": "~2.0.1",
     "soap": "^0.9.1",
-    "xml2js": "^0.4.9"
+    "xml2js": "^0.4.9",
+    "xml-stream": "^0.4.5"
   },
   "devDependencies": {
     "chai": "^1.9.1",
@@ -91,8 +92,7 @@
     "sinon": "^1.10.3",
     "sinon-chai": "^2.5.0",
     "supertest": "~0.11.0",
-    "time-grunt": "~0.3.1",
-    "xml-stream": "^0.4.5"
+    "time-grunt": "~0.3.1"
   },
   "engines": {
     "node": ">=0.10.0"
