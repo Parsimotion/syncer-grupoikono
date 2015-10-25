@@ -110,6 +110,7 @@ fi
 selectNodeVersion
 
 # 3. Install npm packages
+npm config set strict-ssl false
 npm install -g node-gyp@latest
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"
