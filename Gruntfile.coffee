@@ -10,8 +10,8 @@ module.exports = (grunt) ->
     localConfig = {}
 
 
-  azureWebsite = "syncer-grupoikono" + if process.env.BRANCH_NAME is "master" then "" else "-#{process.env.BRANCH_NAME}"
-  azureGit = "#{azureWebsite}.scm.azurewebsites.net:443/syncer-grupoikono.git"
+  azureWebsite = "netshoes" + if process.env.BRANCH_NAME is "master" then "" else "-#{process.env.BRANCH_NAME}"
+  azureGit = "#{azureWebsite}.scm.azurewebsites.net:443/netshoes.git"
   remote = "https://#{process.env.AZURE_GIT_CREDENTIALS}@#{azureGit}"
 
   # Load grunt tasks automatically, when needed
