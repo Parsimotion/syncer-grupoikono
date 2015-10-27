@@ -5,6 +5,7 @@ path = require("path")
 _ = require("lodash")
 clean = (collection) -> collection.map (o) -> _.omit o, _.isFunction
 XmlStreamReader = require('./xmlStreamReader')
+Promise = require("bluebird")
 
 describe "NetshoesXmlAdapter", ->
   adjustments = []
@@ -25,7 +26,7 @@ describe "NetshoesXmlAdapter", ->
 
     adapter = new NetshoesXmlAdapter()
     new XmlStreamReader().read options, (item) ->
-      adjustments = adjustments.concat adapter.adapt item
+      Promise.resolve adjustments = adjustments.concat adapter.adapt item
 
   it "can adapt the xml to a list of adjustments with numerical size", ->
     expexted = [

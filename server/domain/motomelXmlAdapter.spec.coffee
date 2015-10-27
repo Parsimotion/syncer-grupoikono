@@ -4,6 +4,7 @@ fs = require("fs")
 path = require("path")
 _ = require("lodash")
 XmlStreamReader = require('./xmlStreamReader')
+Promise = require("bluebird")
 clean = (collection) -> collection.map (o) -> _.omit o, _.isFunction
 
 describe "MotomelXmlAdapter", ->
@@ -21,7 +22,7 @@ describe "MotomelXmlAdapter", ->
 
     adapter = new MotomelXmlAdapter()
     new XmlStreamReader().read options, (item) ->
-      adjustments = adjustments.concat adapter.adapt item
+      Promise.resolve adjustments = adjustments.concat adapter.adapt item
     .then ->
       expexted = [
         identifier: "55056"
