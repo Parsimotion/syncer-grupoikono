@@ -4,6 +4,7 @@ _ = require("lodash")
 path = require("path")
 fs = require("fs")
 nock = require("nock")
+Promise = require("bluebird")
 
 clean = (collection) -> collection.map (o) -> _.omit o, _.isFunction
 
