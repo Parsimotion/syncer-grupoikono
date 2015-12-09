@@ -32,10 +32,10 @@ all =
   producteca:
     uri: process.env.PRODUCTECA_API or "http://api.producteca.com"
     clientID: process.env.PRODUCTECA_CLIENTID or "5"
-    clientSecret: process.env.PRODUCTECA_CLIENTSECRET or "6e5800d3-4766-4601-a7f0-034d70382b7c"
+    clientSecret: process.env.PRODUCTECA_CLIENTSECRET or "random localhost integration secret!"
     callbackURL: (process.env.DOMAIN or "") + "/auth/producteca/callback"
 
-authServerUrl = process.env.AUTHORIZATION_SERVER_URL
+authServerUrl = process.env.AUTHORIZATION_SERVER_URL or 'http://auth.producteca.com'
 if authServerUrl?
   _.assign all.producteca,
     authorizationURL: "#{authServerUrl}/oauth/authorise"

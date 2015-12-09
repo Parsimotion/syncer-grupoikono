@@ -12,7 +12,7 @@ describe 'WoowJsonAdapter', ->
 
   beforeEach ->
     filename = path.join __dirname, 'woow.json'
-    domain = 'http://az769013.vo.msecnd.net'
+    domain = 'https://imagesproducteca.blob.core.windows.net'
     url = '/jsons/woow.json'
     json = fs.readFileSync filename
 
@@ -43,7 +43,7 @@ describe 'WoowJsonAdapter', ->
       ,
         code: "132945"
         brand: "woOw"
-        category: "De Suspensión"
+        category: "Iluminación"
         name: "Lámpara de suspensión blanco"
         description: "Lámpara de suspensión blanco"
         identifier: "CJXX1111124"
@@ -55,7 +55,7 @@ describe 'WoowJsonAdapter', ->
       ,
         code: "135603"
         brand: "woOw"
-        category: "Set de Herramientas"
+        category: "Ferretería"
         name: "Destornillador a batería con 6 puntas"
         description: "Destornillador a batería con 6 puntas"
         identifier: "CJXX1111129"

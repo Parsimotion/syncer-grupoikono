@@ -38,7 +38,7 @@ exports.notification = (req, res) ->
       woowOptions =
         adapter: new WoowJsonAdapter()
         reader: jsonStreamReader
-        url: process.env.woowUrl or 'http://az769013.vo.msecnd.net/jsons/woow.json'
+        url: process.env.woowUrl
         sync:
           synchro: prices: true, stocks: true, data: true
           createProducts: true
