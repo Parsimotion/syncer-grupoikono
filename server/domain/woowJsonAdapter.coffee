@@ -25,7 +25,7 @@ style="font-family: Arial; color: #444444; width: 92%; margin-left: 4%; margin-r
     width="100%"></div>
     <div class="grid_6 description_block" style="font-family: Arial; color: #444444; display: inline; float: left; position: relative; margin-left: 1%; margin-right: 1%; width: 48.0%;">
     <h1 style="text-align: left; margin: 17px 0 0px 40px; font-size: 25px; letter-spacing: 0.7px;;">
-        PRECIO: $ #{ json.cupon_price }</h1>
+        PRECIO: $ #{ json.coupon_price }</h1>
         <h1 style="text-align: left; margin: 17px 0 0px 40px; font-size: 25px; letter-spacing: 0.7px; color: #025496;">
         #{ json.price_oca }</h1>
         <h2 style="text-align: left; margin: 0px 0px 30px 40px; font-size: 16px; letter-spacing: 0.7px; color: #025496;">
@@ -35,6 +35,13 @@ style="font-family: Arial; color: #444444; width: 92%; margin-left: 4%; margin-r
     </div>
     <div class="clear" style="font-family: Arial; color: #444444; clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;">
     </div>
+</div>
+<div class="container_12 delivery_block grey_border rounded_corners margin_bottom_20"
+style="font-family: Arial; color: #444444; width: 92%; margin-left: 4%; margin-right: 4%; margin-bottom: 0; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 2px solid #d9dadc; border-bottom: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+<div class="content" style="font-family: Arial; color: #444444; padding-left: 20px; padding-right: 20px;">
+    <h2 style="text-align: left; font-size: 16px; margin: 17px 0 0 0; letter-spacing: 0.7px; color: #025496;">
+        C&Oacute;MO HACERTE DE TU COMPRA: #{ orEmpty(json.delivery_time) }</h2>
+</div>
 </div>
     """
 
