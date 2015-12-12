@@ -12,7 +12,9 @@ class HttpSyncer
       accessToken: user.tokens.producteca
 
   synchronize: =>
+    console.log 'syncrhonizing...'
     @productecaApi.getProducts().then (products) =>
+      console.log 'got all the products...'
       syncer = new Syncer @productecaApi, @options.sync, products
       @options.reader.read @options, (item) =>
         adjustments = @options.adapter.adapt item

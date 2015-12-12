@@ -6,6 +6,7 @@ MemoryStream = require("memorystream")
 module.exports =
 class JsonStreamReader
   read: (options, callback) =>
+    console.log 'reading json...'
     new Promise (resolve, reject) =>
       stream = request.get(options.url)
       .pipe(new MemoryStream())
