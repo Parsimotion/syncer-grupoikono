@@ -49,6 +49,8 @@ exports.notification = (req, res) ->
         when "woow" then woowOptions
         else motomelOptions
 
+      console.log "synchronizing #{ user.source or 'motomel' }"
+
       new HttpSyncer(user, options).synchronize().then (results) =>
         res.json 200, results
 
