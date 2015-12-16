@@ -13,7 +13,9 @@ class JsonStreamReader
       .pipe(JSONStream.parse('*'))
 
       stream.on 'data', (data) ->
-        callback(data)
+        stream.pause()
+        callback(data).then ->
+          stream.resume()
 
       stream.on 'end', ->
         resolve()
