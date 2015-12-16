@@ -77,7 +77,7 @@ class WoowJsonAdapter
     </div>
 </div>
 <div class="container_12 delivery_block grey_border rounded_corners margin_bottom_20" id="extincss_42"><div class="content" id="extincss_43">
-        <h2 id="extincss_44">#{ orEmpty(json.delivery_time) }</h2>
+        <h2 id="extincss_44">#{ orEmpty(json.delivery_date) }</h2>
         <br>
         <center>
             <img src="http://a03c5e2e3ebd1e46d96f-16c9a80647c59aa386db9fc9784890ec.r92.cf2.rackcdn.com/entregas.png" alt="woOw Uruguay">
