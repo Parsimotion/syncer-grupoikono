@@ -2,6 +2,7 @@ SDK = require("producteca-sdk")
 ProductecaApi = SDK.Api
 Syncer = SDK.Sync.Syncer
 config = include("config/environment")
+Promise = require("bluebird")
 
 module.exports =
 
@@ -17,5 +18,10 @@ class HttpSyncer
       console.log 'got all the products...'
       syncer = new Syncer @productecaApi, @options.sync, products
       @options.reader.read @options, (item) =>
-        adjustments = @options.adapter.adapt item
-        syncer.execute adjustments
+        try
+          adjustments = @options.adapter.adapt item
+          syncer.execute adjustments
+        catch e
+          console.log e
+          Promise.resolve()
+        
