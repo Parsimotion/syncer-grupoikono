@@ -95,7 +95,7 @@ class NetshoesXmlAdapter
       sizeId = parseInt _.last sku.split('-')
       size = if sizingType is "numeric" then (numericSizeMapping[sizeId] or sizeId) else fixedSizeMapping[sizeId]
       originalPrice = +getValueFor("Price For")
-      price = if originalPrice < 900 then originalPrice + 58 else originalPrice
+      price = if originalPrice < 999 then originalPrice + 64 else originalPrice
 
       adjustment = new Adjustment
         code: getValueFor "Codigo Produto"

@@ -172,7 +172,7 @@ describe "NetshoesXmlAdapter", ->
       name: "Gorra Under Armour Original Skull Ii"
       pictures: [url: "http://images.mx.netshoes.net/mx/produtos/29/181-0135-129/181-0135-129_detalhe1.jpg"]
       stocks: [{ warehouse: "Default", quantity: 5 }]
-      prices: [{ priceList: "Default", value: 357 }]
+      prices: [{ priceList: "Default", value: 363 }]
       code: "128939"
       notes: "Salta al <i>emparrillado</i> con los mejores accesorios y dispuesto a vencer al rival, portando la Gorra Under Armour Original Skull Ii. Su increíble diseño llamativo, está confeccionado con tecnología <i>HeatGear</i>, que absorbe el sudor y es de secado rápido. La banda elástica, proporciona un ajuste personalizado. El sistema anti olor previene el crecimiento de microbios. Por último, la fabricación <i>4-Way Stretch</i>, permite mayor movilidad y mantiene la forma.<li>Gorra Under Armour Original Skull Ii.<li>Modelo masculino.<li>Tecnología <i>HeatGear</i>.<li>Sistema anti olor.<li>Banda elástica de ajuste.<li>Fabricación <i>4-Way Stretch</i>.<br><br><b>Composición:</b> poliéster / elastano.<br><b>Garantía del fabricante:</b> contra defecto de fábrica.<br><b>Origen:</b> Importado"
     ]
