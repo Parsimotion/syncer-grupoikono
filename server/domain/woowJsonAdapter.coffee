@@ -26,6 +26,13 @@ class WoowJsonAdapter
     </div>
     <div class="clear" id="extincss_8"></div>
 </div>
+<div class="container_12 delivery_block grey_border rounded_corners margin_bottom_20" id="extincss_66">
+    <div class="content" id="extincss_43">
+        <h2 id="extincss_67">#{ orEmpty(json.delivery_date) }</h2>
+    </div>
+</div>
+
+
 <div class="container_12 content_block margin_bottom_20" id="extincss_9">
     <div class="grid_6 image_block" id="extincss_10"><img src="#{ mainPictureUrl }" alt="Imagen de producto" width="100%">
     </div>
@@ -38,22 +45,6 @@ class WoowJsonAdapter
     <div class="clear" id="extincss_15"></div>
 </div>
 <div class="clear" id="extincss_16"></div>
-<div class="container_12 atention_block orange_bg orange_border rounded_corners margin_bottom_20" id="extincss_17">
-    <div class="content" id="extincss_18">
-        <table id="extincss_19">
-            <tbody>
-                <tr>
-                    <td id="extincss_20"><img src="http://a03c5e2e3ebd1e46d96f-16c9a80647c59aa386db9fc9784890ec.r92.cf2.rackcdn.com/exclamacion.png" alt="ATENCIÓN!">
-                    </td>
-                    <td id="extincss_21"><span class="white_text" id="extincss_22">PRECIO Y STOCK GARANTIZADO SOLO POR HOY!</span>
-                        <br>Al realizar la compra, <span class="yellow_text" id="extincss_23">TE ENVIAREMOS UN MAIL AUTOMÁTICO CON INSTRUCCIONES</span> para
-                        <br> que puedas seleccionar la <span id="extincss_24">forma de pago y opción de entrega.<br>Tu compra es un compromiso.</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
 <div class="container_12 transaction_block grey_border grey_bg rounded_corners margin_bottom_20" id="extincss_25">
     <div class="grid_3 price_range transaction_block_pad_top" id="extincss_26">
         <p id="extincss_27">Productos de $0 a $1.000</p>
@@ -77,8 +68,6 @@ class WoowJsonAdapter
     </div>
 </div>
 <div class="container_12 delivery_block grey_border rounded_corners margin_bottom_20" id="extincss_42"><div class="content" id="extincss_43">
-        <h2 id="extincss_44">#{ orEmpty(json.delivery_date) }</h2>
-        <br>
         <center>
             <img src="http://a03c5e2e3ebd1e46d96f-16c9a80647c59aa386db9fc9784890ec.r92.cf2.rackcdn.com/entregas.png" alt="woOw Uruguay">
         </center>
