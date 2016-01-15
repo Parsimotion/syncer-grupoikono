@@ -23,7 +23,7 @@ exports.notification = (req, res) ->
       motomelOptions =
         adapter: new MotomelXmlAdapter()
         reader: xmlStreamReader
-        url: 'http://www.motomel-online.com.ar:8100/Motomel2/harticulostoxml'
+        url: 'http://186.137.158.133:8100/Motomel2/harticulostoxml'
         element: 'item'
         sync:
           synchro: prices: true, stocks: true
