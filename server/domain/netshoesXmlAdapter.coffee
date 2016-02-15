@@ -95,7 +95,7 @@ class NetshoesXmlAdapter
       sizeId = parseInt _.last sku.split('-')
       size = if sizingType is "numeric" then (numericSizeMapping[sizeId] or sizeId) else fixedSizeMapping[sizeId]
       originalPrice = +getValueFor("Price For")
-      price = if originalPrice < 999 then originalPrice + 64 else originalPrice
+      # price = if originalPrice < 999 then originalPrice + 64 else originalPrice
 
       adjustment = new Adjustment
         code: getValueFor "Codigo Produto"
@@ -105,7 +105,7 @@ class NetshoesXmlAdapter
         description: getValueFor "Title"
         identifier: sku
         stocks: [{ warehouse: "Default", quantity: variation.attribute[0].$.value }]
-        prices: [{ priceList: "Default", value: price }]
+        prices: [{ priceList: "Default", value: originalPrice }]
         pictures: [{ url: getValueFor("DetalheURL") }]
         notes: getValueFor "Description"
 
